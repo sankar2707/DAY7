@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coutry Details</title>
+</head>
+<body>
+    <script>
+        var request = new XMLHttpRequest();
+        request.open('GET', 'https://restcountries.com/v3.1/all', true);
+        request.send();
+
+        request.onload = function () {
+            var countryData = JSON.parse(request.response);
+            countryData.forEach((element) => {
+                console.log(element.name, element.capital, element.flag);
+            });
+        }
+    </script>
+</body>
+</html>
