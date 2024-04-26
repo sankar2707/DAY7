@@ -6,7 +6,7 @@ let countries = [
     { name: 'India', currency: 'Rupees'},
     ];
   
-  const dollarizedCountries = countries.filter(country => country.currency === 'USD');
+  let dollarCountries = countries.filter(country => country.currency === 'USD');
   
-  console.log(dollarizedCountries.map(country => country.name));
+  console.log(dollarCountries.map(country => country.name));
   
